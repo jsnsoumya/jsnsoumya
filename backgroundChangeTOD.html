@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="tod"></h1>
+</body>
+<script>
+
+const now = new Date();
+const hour = now.getHours();
+
+const body = document.querySelector('body');
+
+    if (hour >= 6 && hour < 12) {
+        body.style.backgroundImage = "url('https://www.igp.com/blog/wp-content/uploads/2022/11/good-morning-pic.jpg')"; // Morning
+        document.getElementById("tod").innerHTML = "MORNING";
+    } else if (hour >= 12 && hour < 18) {
+        body.style.backgroundImage = "url('https://images.unsplash.com/photo-1577257107590-fc448601f16a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YWZ0ZXJub29uJTIwc3VufGVufDB8fDB8fA%3D%3D&w=1000&q=80')"; // Afternoon
+        document.getElementById("tod").innerHTML = "AFTERNOON";
+    }else {
+        body.style.backgroundImage = "url('https://media.gettyimages.com/id/656413668/photo/hillside-at-night-with-stars.jpg?s=612x612&w=gi&k=20&c=ps-IpFlTV6hdaXsi7nJ3js-vze8VeweiMOXtKuxOX54=')"; // Evening/Night
+        document.getElementById("tod").innerHTML = "NIGHT";
+    }
+
+</script>
+<style>
+#tod{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: Georgia, 'hours New Roman', hours, serif;
+    text-shadow: 2px 2px #ffffff;
+    
+}
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+</style>
+</html>
