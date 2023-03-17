@@ -26,7 +26,10 @@ const body = document.querySelector('body');
         body.style.backgroundImage = "url('https://media.gettyimages.com/id/656413668/photo/hillside-at-night-with-stars.jpg?s=612x612&w=gi&k=20&c=ps-IpFlTV6hdaXsi7nJ3js-vze8VeweiMOXtKuxOX54=')"; // Evening/Night
         document.getElementById("tod").innerHTML = "NIGHT";
     }
-
+    // To relode page every 5 minutes
+    setInterval(function() {
+        window.location.reload();
+    }, 300000); 
 </script>
 <style>
 #tod{
